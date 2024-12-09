@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Input Radius value and get Sphere volume</h1>
+    <label for="radius">Radius</label><br>
+    <input type="text" name="radius" id="radius" value=""><br>
+    <label for="volume">Volume</label><br>
+    <input type="number" id="answer" value="0.0000"><br><br>
+    <button type="button" id="button" onclick="calculate(this)">Calculate</button>
+
+<section>
+    <script>
+        let Radius = document.getElementById('radius');
+        let Answer = document.getElementById('answer');
+       
+
+        function calculate(){
+       let volume = (4/3)*3.14*(Radius.value*Radius.value*Radius.value)
+        Answer.value = volume
+        document.getElementById('answer').readOnly = true;
+        
+        
+}
+
+    </script>
+</section>
+</body>
+</html>
