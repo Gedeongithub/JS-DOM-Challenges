@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="sampleTable" border="1">
+        <tr><td>Row1 cell1</td>
+        <td>Row1 cell2</td></tr>
+        <tr><td>Row2 cell1</td>
+        <td>Row2 cell2</td></tr>
+        </table><br>
+        <input type="button" onclick="insert_Row()" value="Insertrow">
+        
+
+        <section>
+            <script>
+                let table = document.getElementById('sampleTable');
+
+                function insert_Row(){
+                    let tableRaw = document.createElement('tr')
+                    let tableData = document.createElement('td')
+                    let tableData2 = document.createElement('td')
+                    tableData = document.createElement('td')
+                    tableRaw.appendChild(tableData)
+                    tableData.textContent = 'New Row'
+                    table.appendChild(tableRaw)
+
+                    tableRaw.appendChild(tableData2)
+
+                
+                }
+            </script>
+        </section>
+</body>
+</html>
