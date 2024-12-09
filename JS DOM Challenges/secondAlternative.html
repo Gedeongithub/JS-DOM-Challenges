@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Click to increase font size</h3>
+    <p id ='text'>JavaScript Exercises - w3resource</p>
+    <p id="fontsize">20</p>
+<div>
+<button id="jsstyle"onclick="js_style()">Style</button>
+</div>
+
+<section>
+    <script>
+    
+
+        let fontsize = document.getElementById('fontsize')
+        let text = document.getElementById('text')
+        let count = 20;
+        function js_style(){
+            text.style.color = 'green'
+            count++;
+            fontsize.innerHTML = count+'px'
+            text.style.fontSize = count+'px'
+            
+        }
+    </script>
+</section>
+</body>
+</html>

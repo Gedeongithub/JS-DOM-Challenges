@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Click to change the Text style</h4>
+    <p id ='text'>JavaScript Exercises - w3resource</p>
+<div>
+<button id="jsstyle"onclick="js_style()">Style</button>
+</div>
+<p id="warning"></p>
+
+
+
+<section>
+    <script>
+        let fontsize = ['20px', '25px', '30px', '35px', '40px', '45px', '50px'];
+        let i = 0;
+        let warning = document.getElementById('warning')
+        let text = document.getElementById('text')
+        function js_style(){
+            text.style.color = 'green'
+            text.style.fontSize = fontsize[i];
+            i = (i +1)% fontsize.length;
+            if (i == fontsize.length-2){
+                warning.innerText = 'Two clicks remaining to reach the end of size' 
+                warning.style.color = 'red'
+                warning.style.backgroundColor = 'black'
+            } else if(i === 0){
+                warning.innerText = 'Reached the end' 
+                warning.style.color = 'white'
+                warning.style.backgroundColor = 'blue'
+            }
+        }
+    </script>
+</section>
+</body>
+</html>
