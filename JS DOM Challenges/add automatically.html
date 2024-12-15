@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter the numbers you want to add below</p>
+    Number 1: <input type="text" class="number" onblur="minE()"><br><br>
+    Number 2: <input type="text" name="" class="number"onblur="minE()"><br><br>
+    Number 3: <input type="text" class="number"onblur="minE()"><br><br><br><br>
+
+    Sum: <input type="text" id="ouput">
+
+
+
+    <script>
+        
+       // let ouput = document.getElementById('ouput').value;
+
+
+       function minE(){
+        let input = document.getElementsByClassName('number')
+        let sum =0;
+        for (let i =0; i<input.length; i++){
+            if(parseFloat(input[i].value)){
+                sum+=parseFloat(input[i].value)
+            }
+        }
+       const display =document.getElementById('ouput').value = sum;
+       }
+    </script>
+</body>
+</html>
